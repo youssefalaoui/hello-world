@@ -1,1 +1,34 @@
-<h2>Courses</h2>
+{{ course.title | uppercase | lowercase }} <br />
+{{ course.students | number }} <br />
+{{ course.rating | number: "2.1-1" }} <br />
+{{ course.price | currency: "EUR":true:"3.1-1" }} <br />
+{{ course.releaseDate | date: "shortDate" }} <br />
+{{text | summary: 30}}
+
+<!-- <h2>{{ "Title: " + getTitle() }}</h2>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course }}
+  </li>
+</ul>
+
+<img [src]="imageUrl" alt="" />
+<table>
+  <tr>
+    <td [attr.colspan]="colSpan"></td>
+  </tr>
+</table>
+
+<div (click)="onDivClicked()">
+  <button
+    class="btn btn-primary"
+    [class.active]="isActive"
+    [style.backgroundColor]="isActive ? 'blue' : 'white'"
+    (click)="onSave($event)"
+  >
+    Save
+  </button>
+</div>
+
+
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()" type="text">  -->
